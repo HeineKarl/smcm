@@ -49,3 +49,22 @@ const prevImage = () => {
 
 nextBtn.addEventListener("click", nextImage);
 prevBtn.addEventListener("click", prevImage);
+
+setInterval(() => {
+  const tracker = document.querySelector(".slider");
+  const trackerChildren = Array.from(tracker.children);
+  const firstImage = tracker.firstElementChild;
+  const lastImage = tracker.lastElementChild;
+  const currentImage = document.querySelector(".current-image");
+  if (lastImage.classList.contains("current")) {
+    trackerChildren.forEach((child) => {
+      child.classList.remove("current");
+    });
+    lastImage.classList.remove("current-image");
+    firstImage.nextElementSibling.classList.add("current-image");
+
+    return;
+  }
+
+  nextImage();
+}, 5000);
