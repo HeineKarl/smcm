@@ -5,9 +5,10 @@
   display: grid;
   grid-template-columns: 5% 25% 65% 5%;
   grid-template-rows: 100%;
-  // position: fixed;
-  // top: 0;
-  // left: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 900;
   transition: top 500ms ease;
 }
 
@@ -77,9 +78,10 @@
 
   &__arrow {
     display: inline-block;
-    font-size: 1.5rem;
-    transform: translateY(3px);
+    font-size: 1rem;
+    transform: translateY(1px);
     pointer-events: none;
+    transition: all 500ms ease;
   }
 }
 
@@ -204,6 +206,10 @@
   opacity: 1;
   pointer-events: all;
   transform: translateY(0px);
+}
+
+.rotate {
+  transform: rotate(180deg);
 }
 
 @keyframes animationLinks {
