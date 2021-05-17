@@ -67,4 +67,4 @@ setInterval(() => {
   }
 
   nextImage();
-}, 5000);
+}, 3000);
